@@ -7,13 +7,15 @@
 // Document Ready Function. All of your jQuery should go in here. 
 $("button").click(function() {
   var speak =$("input").val();
-  var pigLatin= ay;
+  add(speak);
+  var pigLatin= "ay";
   ("#result").text(speak)
 
 
 
 });
 function add(word){
+	console.log(word + " ay");
 	return word + " ay";
 	
 }
