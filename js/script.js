@@ -5,20 +5,50 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
-$("button").click(function() {
-  var speak =$("input").val();
-  add(speak);
-  var pigLatin= "ay";
-  ("#result").text(speak)
+$(document).ready(function(){
+    
+        $("button").click(function() {
+            var speak = $("input").val();
+        vowel();
+         
+        $("#result").html(constanent(speak));
+    
+    });
+    
+ // var speak =$("input").val();
+  //add(speak);
+ // var pigLatin= "ay";
+ // ("#result").text(speak)
 
 
 
 });
-function add(word){
-	console.log(word + " ay");
-	return word + " ay";
-	
+
+        function constanent(word){
+             var firstLetter = word.slice(0, 1);
+            var newWord = word.slice(1) + firstLetter + "ay";
+            return newWord;
+        }
+
+   function add(word){
+	 console.log(word + "ay");
+	 return word + "ay";
 }
+
+  function vowel(){
+     var vowels = ["a", "e", "i", "o", "u"];
+    
+     var str = word;
+     var res = str.charAt(0)
+     if( vowels === str){
+         $("#result").html(add);
+         console.log("true");
+     }
+            
+}
+
+    
+    
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
 
@@ -31,4 +61,6 @@ function add(word){
 	//Loops through all the words in the sentence and transforms each word
 	//It should return a transfromed sentance
 
-
+        function sentenceToPigLatin (){
+            
+        }
