@@ -5,24 +5,42 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
+
+
+
+
+
+
 $(document).ready(function(){
     
+
         $("button").click(function() {
             var speak = $("input").val();
-        vowel();
-         
-        $("#result").html(constanent(speak));
-    
+            //$("#result").html(constanent(speak));
+            //$("#result").html(vowel(speak));
+            //add(speak);
+           //$("#result").html();
+           sentenceToPigLatin(speak);
     });
     
- // var speak =$("input").val();
-  //add(speak);
- // var pigLatin= "ay";
- // ("#result").text(speak)
-
-
 
 });
+
+function sentenceToPigLatin(sentence) {
+    
+    var pigLatin = ''
+    var splitSentence = sentence.split(' ');
+    
+    for (var i = 0; i < splitSentence.length; i++){
+        
+        
+        //$("#result").append(splitSentence[i] + "ay");
+
+       var newWord = constanent(splitSentence[i]);
+       
+       $("#result").append(newWord);
+    }
+}
 
         function constanent(word){
              var firstLetter = word.slice(0, 1);
@@ -31,20 +49,29 @@ $(document).ready(function(){
         }
 
    function add(word){
-	 console.log(word + "ay");
-	 return word + "ay";
-}
-
-  function vowel(){
-     var vowels = ["a", "e", "i", "o", "u"];
+       //var test = word.split(' ');
+       //for (var i = 0; i < test.length; i++){
+        return word[i] + "ay"; 
+        
+      
+                //$("#result").append(test[i] + "ay" + " ");
     
-     var str = word;
-     var res = str.charAt(0)
-     if( vowels === str){
-         $("#result").html(add);
-         console.log("true");
-     }
-            
+	 console.log(word + "ay" + " ");
+	
+
+      function vowel(word){
+         var vowels = ["a", "e", "i", "o", "u"];
+         var str = word;
+         var res = str.charAt(0)
+         if( res === "a" || res === "e" || res === "i" || res === "o" || res === "u"){
+             $("#result").html(add()) ;
+          } else{
+                 add();
+             $("#result").html(constanent() );
+    
+          }
+                
+    }
 }
 
     
@@ -61,6 +88,4 @@ $(document).ready(function(){
 	//Loops through all the words in the sentence and transforms each word
 	//It should return a transfromed sentance
 
-        function sentenceToPigLatin (){
-            
-        }
+      
