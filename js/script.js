@@ -38,7 +38,8 @@ function sentenceToPigLatin(sentence) {
 
        var newWord = constanent(splitSentence[i]);
        
-       $("#result").append(newWord);
+       
+       $("#result").append(" ", newWord);
     }
 }
 
